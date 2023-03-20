@@ -6,5 +6,5 @@ twoDimensions.Fill();
 Console.WriteLine("Two dimensions array =>");
 Console.WriteLine(twoDimensions);
 var oneDimension = twoDimensions.ToOneDimension();
-Console.WriteLine("One dimensions array =>");
+Console.WriteLine("One dimension array =>");
 Console.WriteLine(oneDimension);

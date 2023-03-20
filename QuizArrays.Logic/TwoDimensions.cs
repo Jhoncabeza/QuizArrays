@@ -8,7 +8,7 @@ namespace QuizArrays.Logic
 {
     public class TwoDimensions
     {
-        private int[,] _array;
+        private readonly int[,] _array;
 
         public int M { get; set; }
         public int N { get; set; }
@@ -22,17 +22,12 @@ namespace QuizArrays.Logic
 
         public void Fill()
         {
-            Fill(1, 100);
-        }
-
-        public void Fill(int minimun, int maximun)
-        {
             var random = new Random();
             for (int i = 0; i < M; i++)
             {
                 for (int j = 0; j < N; j++)
                 {
-                    _array[i, j] = random.Next(minimun, maximun);
+                    _array[i, j] = random.Next(1, 100);
                 }
             }
         }
@@ -40,6 +35,7 @@ namespace QuizArrays.Logic
         public OneDimension ToOneDimension()
         {
             var myArrayOneDimension = new OneDimension(M * N);
+
             for (int i = 0; i < M; i++)
             {
                 for (int j = 0; j < N; j++)

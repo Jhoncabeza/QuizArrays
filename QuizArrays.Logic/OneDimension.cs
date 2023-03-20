@@ -6,9 +6,9 @@
         private int _top;
 
 
-        public bool isFull => _top == N;
+        private bool isFull => _top == N;
 
-        public bool isEmpty => _top == 0;
+        private bool isEmpty => _top == 0;
 
         public int N { get; }
 
